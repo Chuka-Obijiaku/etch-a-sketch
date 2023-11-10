@@ -2,6 +2,7 @@
 
 let color = "#141414";
 const white = "#FFFFFF";
+let boardSize = 16;
 let drawMode = false; // only draw if this is true 
 
 
@@ -34,10 +35,11 @@ function generateBoard (size) {
 
 
  
-generateBoard(16);
+generateBoard(boardSize);
 
 function changeSize(input) {
-    generateBoard(input);
+    boardSize = input;
+    generateBoard(boardSize);
 }
 
 function changeColor(newColor) {
@@ -52,6 +54,11 @@ function toggleDraw() {
         drawMode = true;
     }
 }
+
+function clearBoard() {
+    generateBoard(boardSize);
+}
+
 // be carefull of margins and padding
 // setup a hover effect so grid divs change color 
 // add a button to the page that asks the number of square to generate 
