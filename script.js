@@ -1,7 +1,10 @@
 // generate the grid of divs 16 x 16
 
-let drawColor = "#141414";
+let color = "#141414";
 const white = "#FFFFFF";
+let drawMode = false; // only draw if this is true 
+
+
 
 
 function generateBoard (size) {
@@ -15,8 +18,10 @@ function generateBoard (size) {
     for (let i = 0; i < size**2; i++) {
         let cell = document.createElement("div");
         cell.addEventListener('mouseover', ()=> {
-            
-            cell.style.backgroundColor = drawColor;
+            if (drawMode) {
+                cell.style.backgroundColor = color;
+
+            }
         });
         cell.id = 'cell';
         cell.style.backgroundColor = white;
@@ -35,8 +40,17 @@ function changeSize(input) {
     generateBoard(input);
 }
 
-function changeColor(color) {
-    drawColor = color;
+function changeColor(newColor) {
+    color = newColor;
+}
+
+function toggleDraw() {
+    if (drawMode) {
+        drawMode = false;
+    }
+    else {
+        drawMode = true;
+    }
 }
 // be carefull of margins and padding
 // setup a hover effect so grid divs change color 
