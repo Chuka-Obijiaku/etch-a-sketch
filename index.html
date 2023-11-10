@@ -7,14 +7,30 @@
     <title>Etch a Sketch</title>
 </head>
 <body>
-    <div class="test">
-        <div class="grid-square"></div>
-        <div class="grid-square"></div>
-        <div class="grid-square"></div>
-        <div class="grid-square"></div>
-    </div>
-    <div id="grid-container">
+    <header>
+        <h1 class="header__h1">Etch - A - Sketch</h1>
+    </header>
 
+    <div class="main">
+
+        <div class="settings">
+            <div class="setting__input-area">
+                
+                <button onclick="changeSize(4)" class="btn btn__input">Small</button>
+                <button onclick="changeSize(16)" class="btn btn__input">Medium</button>
+                <button onclick="changeSize(64)" class="btn btn__input">Large</button>
+            </div>
+            <button class="btn">Draw</button>
+            <!-- <button class="btn">Red</button>
+            <button class="btn">Green</button>
+            <button class="btn">Random</button>
+            <button class="btn">Clear</button> -->
+
+        </div>
+        
+        <div class="board" id="board">
+    
+        </div>
     </div>
 
 
