@@ -20,7 +20,12 @@ function generateBoard (size) {
         let cell = document.createElement("div");
         cell.addEventListener('mouseover', ()=> {
             if (drawMode) {
-                cell.style.backgroundColor = color;
+                if (color == 'random') {
+                    cell.style.backgroundColor = randomColor();
+                } else {
+                    cell.style.backgroundColor = color;
+
+                }
 
             }
         });
@@ -43,6 +48,7 @@ function changeSize(input) {
 }
 
 function changeColor(newColor) {
+    
     color = newColor;
 }
 
@@ -57,6 +63,11 @@ function toggleDraw() {
 
 function clearBoard() {
     generateBoard(boardSize);
+}
+
+function randomColor() {
+
+    return `hsl(${Math.random() * 360}, 100%, 50%)`;
 }
 
 // be carefull of margins and padding
