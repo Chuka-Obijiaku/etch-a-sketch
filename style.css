@@ -17,18 +17,23 @@
 }
 
 body {
+    min-height: 100vh;
     background-color: var(--white);
+    display: flex;
+    flex-direction: column;
 }
 
 
 /*  || BLOCKS */
 
+
 header {
     
-    height: 192px;
+    height: 100px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .main { 
@@ -38,9 +43,18 @@ header {
     
 }
 
+.color-picker {
+    border: 0;
+    padding: 0;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 8px;
+}
+
 .board {
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 600px;
     display: grid;
     
 
@@ -62,7 +76,24 @@ header {
     padding: 10px;
 }
 
+footer {
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+
+}
+
 /*  ||  ELEMENT */
+
+.footer__h2 {
+    font-size: medium;
+}
+
+.board-area__btns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
 
 .btn__input {
     margin: 0;

@@ -16,23 +16,39 @@
         <div class="settings">
             <div class="setting__input-area">
                 
-                <button onclick="changeSize(4)" class="btn btn__input">4 X 4</button>
-                <button onclick="changeSize(16)" class="btn btn__input">16 X 16</button>
-                <button onclick="changeSize(64)" class="btn btn__input">64 X 64</button>
             </div>
-            <button onclick="changeColor('#FFFFFF')" class="btn">Eraser</button>
+            <input type="color" class="color-picker" id="colorPicker" value="#141414" onchange="changeColor(this.value)">
             <button onclick="changeColor('#141414')" class="btn">Black</button>
             <button onclick="clearBoard()" class="btn">Clear</button>
             <button onclick="changeColor('random')" class="btn">Rainbow</button>
+            <button onclick="changeColor('#FFFFFF')" class="btn">Eraser</button>
             
-
+            
         </div>
+
+        <div class="board-area">
+            
+            <div class="board-area__btns">
+                <button class="btn btn__input" onclick="changeSize(16)"">16 X 16</button>
+                <button class="btn btn__input" onclick="changeSize(32)">32 X 32</button>
+                <button class="btn btn__input" onclick="changeSize(64)">64 X 64</button>                
+            </div>
+            <div class="board" id="board" onclick="toggleDraw()">
+
+            </div>
         
-        <div  onclick="toggleDraw()" class="board" id="board">
     
         </div>
     </div>
+    
+    <footer>
+        <h2 class="footer__h2" >
+            Built by Chuka Obijiaku in conjunction with 
+            <a href="https://www.theodinproject.com/lessons/foundations-etch-a-sketch" target="">The Odin Project</a>
+        </h2>
 
+    </footer>
+    
 
     <script src="script.js"></script>
 </body>

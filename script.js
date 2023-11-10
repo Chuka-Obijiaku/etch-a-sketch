@@ -4,6 +4,10 @@ let color = "#141414";
 const white = "#FFFFFF";
 let boardSize = 16;
 let drawMode = false; // only draw if this is true 
+// let colorPicker = document.getElementById("colorPicker");
+// colorPicker.addEventListener("onchange", () => {
+
+// })
 
 
 
@@ -20,7 +24,7 @@ function generateBoard (size) {
         let cell = document.createElement("div");
         cell.addEventListener('mouseover', ()=> {
             if (drawMode) {
-                if (color == 'random') {
+                if (color === 'random') {
                     cell.style.backgroundColor = randomColor();
                 } else {
                     cell.style.backgroundColor = color;
